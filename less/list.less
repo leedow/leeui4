@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/**
+ * list style
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-05-11 22:05:30
+ * @version $Id$
+ */
+.list-bg{
+	background: @base-light-color;
+}
+
+.list{
+	text-align: left;
+	border-top: 1px @base-line-color solid;
+	background: @base-none-color;
+}
+
+.list-item{
+	clear: both;
+	display: block;
+	position: relative;
+	border-bottom: 1px @base-line-color solid;
+	padding: @base-padding-v @base-padding-h;
+	background: @base-none-color;
+	.icon-right{
+		position: absolute;
+		right: @base-padding-h;
+		top: @base-padding-v + 3;
+	}
+	.icon-warm{
+		background: @base-warm-color;
+		color: #fff;
+		padding:2px 6px;
+		right: @base-padding-h - 6;
+		top: @base-padding-v - 2;
+		border-radius: @base-radius*3;
+	}
+	i{
+		//color: @global-font-light-color;
+	}
+	.button-right, .button-right-bor{
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: @base-padding-v @base-padding-h;
+	}
+
+	.button-right-bor{
+		border-left: 1px @base-line-color solid;
+	}
+	.button-right:hover, .button-right-bor:hover{
+		background: @base-light-color;
+	}
+}
+
+
+
+.list-item:hover{
+	//background:  @base-light-color;//lighten(@base-light-color, 10%);
+}
+
+.list-title, .title-bor{
+	text-align: left;
+	padding: ceil(@base-padding-v*0.5) @base-padding-h;
+	font-size: @font-size-sm;
+}
+
+.list-title-bor{
+	border-bottom: 1px @base-line-color solid;
+	margin: 0 @base-padding-h;
+	padding-left: 0;
+}
+
+.list-box{
+	margin: 0 ceil(@base-padding-h*0.5);
+	border-left: 1px @base-line-color solid;
+	border-right: 1px @base-line-color solid;
+	border-radius: @base-radius;
+	overflow: hidden;
+}
+

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/**
+ * leeui4配置文件
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-05-11 20:50:01
+ * @version $Id$
+ */
+////////////////////////////////
+//基准配置
+@base-line-color:		#eee;//线条颜色
+@base-light-color:		#f9f9f9;//浅背景色
+@base-none-color:		#fff;//阅读背景色
+@base-main-color: 		#2b88cf;//主色
+@base-warm-color: 		#dd514c;//高亮色
+
+@base-padding-v:		18px;
+@base-padding-h:		15px;
+
+@base-radius:			4px;
+
+////////////////////////////////
+//字体相关配置
+@global-font-family:	'Microsoft YaHei', SimHei;//全局字体设置
+@global-font-size:		14px;//全局字体大小
+@global-font-color:		#444;//全局字体颜色
+@global-font-light-color: #999;
+@global-a-color:		@global-font-color;
+@global-a-color-hv:		@global-font-color;
+
+@font-size-lg:			28px;
+@font-size-md:			18px;
+@font-size-sm:			14px;
+@font-size-ti:			12px;	
+
+/////////////////////////////////
+//布局相关设置
+@layout-background:		rgba(255, 255, 255, 1);//遮罩层背景颜色
+@box-shadow-color: 		#e0e0e0;
+
+/////////////////////////////////
+//菜单设置
+@menu-height: 	70px;//下方菜单栏高度
+@menu-padding:			5px;		
+@menu-background-color: #fff;
+
+//////////////////////////////////
+//header相关设置
+@header-height:			44px;
+@header-background:		@base-main-color;
+@header-font-color:		#fff;
+@header-padding-v:		@base-padding-v;
+@header-padding-h:		@base-padding-h;
+@header-line-height:	(@header-height - @header-padding-v*2);
+@header-border-bottom:	1px @base-line-color solid;
+
+/////////////////////////////////
+//按钮      
+
+//按钮尺寸外形
+@btn-padding-lg:		15px 20px;
+@btn-padding-md:		10px 15px;
+@btn-padding-sm:		5px 10px;		
+@btn-radius:			4px;
+	
+//默认无色样式按钮
+@btn-background:		none;
+@btn-border:			0;
+@btn-background-hv:		@base-light-color;
+
+//普通颜色按钮
+@btn-background-default:@base-main-color;
+@btn-background-hv-default:lighten(@base-main-color, 10%);
+@btn-border-default: 	1px @base-main-color solid;
+@btn-border-hv-default:	1px lighten(@base-main-color, 10%) solid;
+@btn-color-default:		#fff;
+
+//警告颜色按钮
+@btn-background-warm:	@base-warm-color;
+@btn-background-hv-warm:lighten(@base-warm-color, 10%);
+@btn-border-warm:		1px @base-warm-color solid;
+@btn-border-hv-warm:	1px lighten(@base-warm-color, 10%) solid;
+@btn-color-warm:		#fff;
+
+
+/////////////////////////////////
+//表单配置
+@input-padding: 10px 15px;
+
+/////////////////////////////////
+//响应式
+@response-width: 600px;

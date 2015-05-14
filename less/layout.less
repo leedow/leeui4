@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/**
+ * layout style
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-05-11 20:56:14
+ * @version $Id$
+ */
+.layout-header, .layout, .layout-menu{
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+.layout-header{
+	top:0;
+	height: @header-height;
+}
+
+.layout{
+	width: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+.layout-top{
+	top: @header-height;
+}
+
+.layout-bttom{
+	bottom: @menu-height;
+}
+
+.layout-menu{
+	bottom:0;
+	height: @menu-height;
+}
+

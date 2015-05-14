@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/**
+ * buttons
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-05-14 21:27:01
+ * @version $Id$
+ */
+.button{
+	font-family: @global-font-family;
+}
+
+/////////////////////////////
+//按钮样式
+.button, 
+.button-default,
+.button-warm,
+{
+	border-radius: @btn-radius;
+	border: @btn-border;
+	cursor: pointer;
+	display: inline-block;
+	.button-md;
+}
+
+.button{
+	background: @btn-background; 
+}
+
+.button:hover{
+	background: @btn-background-hv; 
+}
+
+.button-default{
+	background: @btn-background-default;
+	border: @btn-border-default;
+	color: @btn-color-default; 
+}
+
+.button-default:hover{
+	background: @btn-background-hv-default;
+	border: @btn-border-hv-default;
+}
+
+.button-warm{
+	background: @btn-background-warm;
+	border: @btn-border-warm;
+	color: @btn-color-warm;
+}
+
+.button-warm:hover{
+	background: @btn-background-hv-warm;
+	border: @btn-border-hv-warm;
+}
+////////////////////////////
+//按钮尺寸
+.button-sm{
+	padding: @btn-padding-sm;
+	font-size: @font-size-ti;
+}
+
+
+.button-md{
+	padding: @btn-padding-md;
+	font-size: @font-size-sm;
+}
+
+.button-lg{
+	padding: @btn-padding-lg;
+	font-size: @font-size-md;
+}
+
+//宽屏按钮
+.button-block{
+	display: block;
+	width: 100%;
+}
