@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/**
+ * Pic widgets style
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-05-16 12:53:50
+ * @version $Id$
+ */
+ /////////////////////
+ //带左侧图标
+.pic-widget-md{
+	position: relative;
+	overflow: hidden;
+	padding-left: @pic-widget-size-md + @base-padding-h;
+
+	.pic{
+		position: absolute;
+		top:0;
+		left:0;
+		//border: 1px @base-line-color solid;
+		width: @pic-widget-size-md;
+		height:@pic-widget-size-md;
+	}
+
+	.pic img{
+		width: @pic-widget-size-md;
+		height:@pic-widget-size-md;
+	}
+}
+
+.pic-widget-lg{
+	position: relative;
+	min-height: @pic-widget-size-lg;
+	padding-left: @pic-widget-size-lg;
+
+	.pic{
+		position: absolute;
+		top:0;
+		left:0;
+		border: 1px @base-line-color solid;
+		width: @pic-widget-size-lg;
+		height:@pic-widget-size-lg;
+	}
+
+	.pic img{
+		width: @pic-widget-size-md;
+		height:@pic-widget-size-md;
+	}
+}
+
+
+.pic-widget-sm{
+	position: relative;
+	min-height: @pic-widget-size-sm;
+	padding-left: @pic-widget-size-sm;
+
+	.pic{
+		position: absolute;
+		top:0;
+		left:0;
+		border: 1px @base-line-color solid;
+		width: @pic-widget-size-sm;
+		height:@pic-widget-size-sm;
+	}
+
+	.pic img{
+		width: @pic-widget-size-md;
+		height:@pic-widget-size-md;
+	}
+}

@@ -6,7 +6,7 @@
  * @date    2015-05-14 21:27:01
  * @version $Id$
  */
-.button{
+button, input{
 	font-family: @global-font-family;
 }
 
@@ -29,6 +29,15 @@
 
 .button:hover{
 	background: @btn-background-hv; 
+}
+
+.button-grey{
+	background: @btn-background-grey;
+	border: @btn-border-grey;
+}
+
+.button-grey:hover{
+	background: @btn-background-hv-grey;
 }
 
 .button-default{
@@ -56,18 +65,18 @@
 //按钮尺寸
 .button-sm{
 	padding: @btn-padding-sm;
-	font-size: @font-size-ti;
+	font-size: @font-size-sm;
 }
 
 
 .button-md{
 	padding: @btn-padding-md;
-	font-size: @font-size-sm;
+	font-size: @font-size-md;
 }
 
 .button-lg{
 	padding: @btn-padding-lg;
-	font-size: @font-size-md;
+	font-size: @font-size-lg;
 }
 
 //宽屏按钮

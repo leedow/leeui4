@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Dialog - leeui4</title>
+<link href="../leeui.min.css" type="text/css" rel="stylesheet">
+<link href="../fonts/font-awesome.min.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../leeui.min.js"></script>
+<script type="text/javascript">
+	leeui.init();
+</script>
+</head>
+<body>
+	<header class="layout-header">
+		<div class="header">
+			Welcome to leeui4
+		</div>
+	</header>
+	<div class="layout layout-top">
+		<div class="row">
+			
+			<div class="col-12" style="padding:10px;">
+				<button class="button button-default button-block" id="dia">打开Dialog</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#dia').click(function(){
+			$.dialog({
+				name: '#search',
+				open: function(){
+					alert('打开');
+				},
+				close: function(){
+					alert('关闭');
+				}
+			});
+		});
+	</script>
+
+	<div class="dialog-layout dialog" id="search">
+		<div class="header-layout">
+			<div class="header">
+				搜索  
+				<a class="button-left close-dialog"><i class="fa fa-search"></i></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

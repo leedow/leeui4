@@ -7,6 +7,20 @@
  * @version $Id$
  */
 ////////////////////////////////
+//字体相关配置
+@global-font-family:	'Microsoft YaHei', SimHei;//全局字体设置
+@global-font-size:		14px;//全局字体大小
+@global-font-color:		#444;//全局字体颜色
+@global-font-light-color: #999;
+@global-a-color:		@global-font-color;
+@global-a-color-hv:		@global-font-color;
+
+@font-size-lg:			1.2*@global-font-size;
+@font-size-md:			@global-font-size;
+@font-size-sm:			0.8*@global-font-size;
+@font-size-ti:			0.8*@global-font-size;	
+
+////////////////////////////////
 //基准配置
 @base-line-color:		#eee;//线条颜色
 @base-light-color:		#f9f9f9;//浅背景色
@@ -17,21 +31,7 @@
 @base-padding-v:		18px;
 @base-padding-h:		15px;
 
-@base-radius:			4px;
-
-////////////////////////////////
-//字体相关配置
-@global-font-family:	'Microsoft YaHei', SimHei;//全局字体设置
-@global-font-size:		14px;//全局字体大小
-@global-font-color:		#444;//全局字体颜色
-@global-font-light-color: #999;
-@global-a-color:		@global-font-color;
-@global-a-color-hv:		@global-font-color;
-
-@font-size-lg:			28px;
-@font-size-md:			18px;
-@font-size-sm:			14px;
-@font-size-ti:			12px;	
+@base-radius:			0.28em; //4px;
 
 /////////////////////////////////
 //布局相关设置
@@ -58,15 +58,20 @@
 //按钮      
 
 //按钮尺寸外形
-@btn-padding-lg:		15px 20px;
-@btn-padding-md:		10px 15px;
-@btn-padding-sm:		5px 10px;		
-@btn-radius:			4px;
+@btn-padding-lg:		0.71em 1em; //15px 20px;
+@btn-padding-md:		0.71em 1em; //10px 15px;
+@btn-padding-sm:		0.71em 1em;		
+@btn-radius:			0.28em;
 	
 //默认无色样式按钮
 @btn-background:		none;
 @btn-border:			0;
 @btn-background-hv:		@base-light-color;
+
+//灰色按钮
+@btn-background-grey: #f2f2f2;
+@btn-border-grey:	1px @base-line-color solid;
+@btn-background-hv-grey: #f9f9f9;
 
 //普通颜色按钮
 @btn-background-default:@base-main-color;
@@ -85,8 +90,21 @@
 
 /////////////////////////////////
 //表单配置
-@input-padding: 10px 15px;
+@input-padding: 0.88em 1em;
 
 /////////////////////////////////
 //响应式
 @response-width: 600px;
+
+
+/////////////////////////////////
+//控件配置
+
+//左侧带图标的控件
+@pic-widget-size-md: 60px;
+@pic-widget-size-lg: 120px;
+@pic-widget-size-sm: 40px;
+
+//数字选择控件
+@count-widget-width: 60px;
+@count-widget-input-padding: 0.69em 1em;//@btn-padding-md

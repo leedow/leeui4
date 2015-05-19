@@ -2,7 +2,7 @@ module.exports = function(grunt){
 	grunt.initConfig({		
 		uglify: {
 			build: {
-				src: ['js/leeui.js'],
+				src: ['js/leeui.js', 'js/count_widget.js', 'js/dialog_widget.js'],
 				dest: 'leeui.min.js'
 			}
 	    },
@@ -15,7 +15,7 @@ module.exports = function(grunt){
 	    	},
 	    	compress: {
 	    		files: ['less/*.less', 'js/*'],
-	    		tasks: ['less:dev'/*, 'uglify:build'*/]
+	    		tasks: ['less:dev', 'uglify:build']
 	    	}
 	    },
 	    less: {
