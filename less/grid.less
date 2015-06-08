@@ -8,6 +8,7 @@
  */
 .row{
 	//padding: @base-padding-v @base-padding-h;
+	overflow:hidden;
 }
 
 .row-pd{
@@ -15,11 +16,16 @@
 }
 
 .col-pd{
-	padding:  @base-padding-v @base-padding-h;
+	padding:  0.8em @base-padding-h/2;
+}
+
+.col-pd-sm{
+	padding: @base-padding-v/2 @base-padding-h/2;
 }
 
 .col{
 	float:left;
+	overflow: hidden;
 }
 
 .col-4{
@@ -37,11 +43,14 @@
 	width: 50%;
 }
 
-
 .offset-3{
 	margin-left: 25%;
 }
 
 .offset-4{
 	margin-left: 33.33333%;
+}
+
+.offset-8{
+	margin-left: 66.666666%;
 }

@@ -8,12 +8,25 @@
 var leeui = {};
 leeui.widgets = {};
 
-
-leeui.init = function(){
-	$(document).ready(function(){
-		leeui.widgets.count.init();
-		leeui.widgets.dialog.init();
-	});
-
-}
+(function(factory){
+	if (typeof define == 'function') {
+		define(function(require, exports, module){
+			require('zepto');
+			console.log("init leeui");
+			factory(Zepto);
+		});
+	} else {
+		factory(Zepto);
+	}
+})(function($){
+	leeui.init = function(){
+		$(document).ready(function(){
+			leeui.widgets.count.init();
+			leeui.widgets.dialog.init();
+			leeui.widgets.check.init();
+			leeui.widgets.sidebar.init();
+			leeui.widgets.tabs.init();
+		});
+	}
+})
 

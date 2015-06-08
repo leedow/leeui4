@@ -2,9 +2,18 @@ module.exports = function(grunt){
 	grunt.initConfig({		
 		uglify: {
 			build: {
-				src: ['js/leeui.js', 'js/count_widget.js', 'js/dialog_widget.js'],
+				src: ['js/leeui.js', 
+				'js/count_widget.js', 
+				'js/dialog_widget.js', 
+				'js/check_widget.js', 
+				'js/sidebar_widget.js',
+				'js/tabs_widget.js'],
 				dest: 'leeui.min.js'
-			}
+			}/*,
+			build2: {
+				src: ['js/iscroll-lite.js'],
+				dest: 'iscroll.min.js'
+			}*/
 	    },
 	    watch: {
 	    	client: {

@@ -11,11 +11,11 @@
 	from 	{ transform:translateY(-100%); }
 	to 		{ transform: translateY(0); }
 }
-@-moz-keyframes slideInRight {
+@-moz-keyframes slideFromTop {
 	from 	{ -moz-transform:translateY(-100%); }
 	to 		{ -moz-transform: translateY(0); }
 }
-@-webkit-keyframes slideInRight {
+@-webkit-keyframes slideFromTop {
 	from 	{ -webkit-transform:translateY(-100%); }
 	to 		{ -webkit-transform: translateY(0); }
 }
@@ -32,6 +32,48 @@
 @-webkit-keyframes slideFromBottom {
 	from 	{ -webkit-transform:translateY(100%); }
 	to 		{ -webkit-transform: translateY(0); }
+}
+
+//右滑入
+@keyframes slideFromRight {
+	from 	{ transform:translateX(100%); }
+	to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideFromRight {
+	from 	{ -moz-transform:translateX(100%); }
+	to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideFromRight {
+	from 	{ -webkit-transform:translateX(100%); }
+	to 		{ -webkit-transform: translateX(0); }
+}
+
+//左滑入
+@keyframes slideFromLeft {
+	from 	{ left:-100%}
+	to 		{ left:0; }
+}
+@-moz-keyframes slideFromLeft {
+	from 	{ left:-100%}
+	to 		{ left:0; }
+}
+@-webkit-keyframes slideFromLeft {
+	from 	{ left:-100%}
+	to 		{ left:0; }
+}
+
+//左滑出
+@keyframes slideToLeft {
+	from 	{ left:0 }
+	to 		{ left: -100%; }
+}
+@-moz-keyframes slideToLeft {
+	from 	{ left:0 }
+	to 		{ left: -100%; }
+}
+@-webkit-keyframes slideToLeft {
+	from 	{ left:0 }
+	to 		{ left: -100%; }
 }
 
 //缩放显示

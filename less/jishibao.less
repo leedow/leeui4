@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/**
+ * 集市宝定制
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-05-14 21:06:54
+ * @version $Id$
+ */
+
+.dark{
+	background: #f9f9f9;
+}
+
+/* 登录 */
+
+.layout-response .layout-login{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	margin-top:-180px;
+	padding:0 8% 0 8%;
+}
+.login-logo{
+	animation: slideFromTop 0.8s both ease; 
+	-webkit-animation: slideFromTop 0.8s both ease;
+	-moz-animation: slideFromTop 0.8s both ease;  
+}
+.form-group{
+	animation: scaleUp 0.4s both ease; 
+	-webkit-animation: scaleUp 0.4s both ease;
+	-moz-animation: scaleUp 0.4s both ease; 
+	line-height: 1em; 
+	.input-icon{
+		color: #C3BFB3;
+		border: 0;
+	}
+
+	.input-icon input{
+		background: #fff;
+	}
+
+	.input-icon input:-webkit-autofill {
+   		-webkit-box-shadow: 0 0 0px 1000px #EBE6E2 inset;
+	}
+}
+
+.login-bg{
+	background: #F7F6F2;
+}
+
+
+ 
+
+/*首页主菜单 */
+.menu-box{
+	padding: @base-padding-h 0;
+	overflow: hidden;
+	border-bottom: 1px @base-line-color solid;
+}
+.main-menu{
+	display: inline-block;
+	text-align: center;
+	.icon{
+		margin: 0 auto;
+		font-size: 1.2*@font-size-lg;
+		line-height: 2.4em;
+		width: 2.4em	;
+		height: 2.4em;
+		border-radius: 1.2em;
+		color: #fff;
+	}
+	.icon-a{
+		background: #88C7E3;
+	}
+	.icon-b{
+		background: @base-main-color;
+	}
+	.icon-c{
+		background: #F34C49;
+	}
+	.icon-d{
+		background: #FA9A61;
+	}
+	span{
+		display: block;
+		padding-top:5px;
+		font-size: @font-size-sm;
+	}
+}
+
+
+/* 首页分类 */
+.category{
+	//border-top: 1px @base-line-color solid;
+	overflow: hidden;
+	li{
+		float:left;
+		a{
+			display: inline-block;
+			padding: 15px 20px 13px 20px;
+		}
+	}
+
+	.current{
+		border-bottom: 2px @base-main-color solid;
+		a{color: @base-main-color;}
+	}
+}
+
+/* 滑出分类  */
+.level2{
+	padding-left: @tabs-width;
+	li{
+		position: relative;
+		//border-bottom: 1px @base-line-color solid;
+		text-align: left;
+		a{
+			display: block;
+			padding: 0.8em 1em;
+		}
+	}
+
+	li:after{
+		font: normal normal normal 14px/1 FontAwesome;
+		position: absolute;
+		right:0;
+		top:0;
+		content: "\f105";
+		padding: 0.8em 1em;
+		color:#999;
+	}
+}
+
+/* 顶部搜索 */
+#search {
+	position: relative;
+	border: 1px @base-line-color solid;
+	background: #fff;
+	border-radius: @base-radius;
+	height: 100%;
+
+
+	form{
+
+	}
+	.search-input{
+		border: 0;
+		position: absolute;
+		left:0;
+		top:0;
+		padding: 0 1em;
+		font-size: @font-size-md;
+		width: 100%;
+		height: 100%;
+		border-radius:@base-radius;
+	}
+
+	.search-button{
+		color: #444;
+		line-height: @header-height - 10;
+		position: absolute;
+		width: 50px;
+		height: 100%;
+		background: none;
+		border: none;
+		color:#999;
+		right:0;
+		top:0;
+	}
+}
+
+.search-tags{
+	text-align: left;
+	padding: 20px;
+	li{
+		float: left;
+		padding: 10px;
+		a{
+			display: inline-block;
+			color: #fff;
+			background: @base-main-color;
+			padding: 5px 15px;
+			border-radius: @base-radius;
+		}
+	}
+}
+
+
+/* 加入购物车动画 */
+.add-cart{
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	background: #000;
+	animation: add 1.5s forwards;
+	-webkit-animation: add 1.5s forwards;
+	-moz-animation: add 1.5s forwards;
+	img{
+		width: 60px;
+
+	}
+}
+
+@keyframes add{
+	0% {left: 10%;}
+	//90% {bottom:30px; }
+	100% {bottom:30px; left: 20%;transform: scale(0.2);display: none;}
+}
+
+@-webkit-keyframes add{
+	0% {left: 10%;}
+	//90% {bottom:30px; }
+	100% {bottom:30px; left: 20%;-webkit-transform: scale(0.2);display: none;}
+}
+
+ 
+@-moz-keyframes add{
+	0% {left: 10%;}
+	//90% {bottom:30px; }
+	100% {bottom:30px; left: 20%;-webkit-transform: scale(0.2);display: none;}
+}
+
+
+
+/* 菜单列表 */
+.vg-name{
+	font-size: @font-size-md;
+	font-weight: normal;
+	.mp0;
+	padding-right: 100px;
+	padding-bottom: 0.5em;
+}
+
+.info{
+	color: #999;
+	padding-bottom: 0.8em;
+}
+
+.price{
+	position: absolute;
+	right: 0;
+	top:0;
+	color: #999;
+	font-size: @font-size-md;
+
+	.money{
+		color: #F34C49;
+		font-size: @font-size-lg;
+	}
+}
+
+.pic-widget-md{
+	.toolbar{
+		position: absolute;
+		right:0;
+		bottom:0;
+	}
+}
+
+
+/* 结算固定条 */
+.buy{
+	width: 100%;
+	//padding: 5px 10px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #f2f2f2;
+	border-top:1px #eee solid;
+	.money{
+		font-size: @font-size-lg*1.2;
+		line-height: 50px;
+		color: #dd514c;
+		font-weight: bold;
+	}
+
+	.pay{
+		display: inline-block;
+		background: #F34C49;
+		height:50px;
+		line-height: 50px;
+		padding: 0 20px;
+		//border-radius: 20px;
+	}
+
+	.go-car{
+		position: absolute;
+		top:0;
+		right:0;
+		.button{
+			border-radius:0;
+			height:50px;
+			padding:0 15px;
+			line-height: 50px;
+		}
+	}
+}
+
+
+.list-title{
+	background: #f9f9f9;
+}
+
+
+/* 购物车 */
+.money{
+
+	span {
+		color: #dd514c;
+		font-size: @font-size-lg;
+	}
+}
+
+/* 我的订单 */
+.order-info{
+	text-align: left;
+	.cat{
+		color: #999;
+		font-size: @font-size-sm;
+		display: block;
+		padding-bottom:4px;
+	}
+	.warm{
+		color: #dd514c;
+	}
+	.num{
+		font-size: @font-size-lg;
+	}
+}
+
+.order-box{
+	padding:0 0.5em;
+}
+
+
+//优惠券
+///////////////////////////////////////////////////
+.coupon-layout{
+	.checked{
+		border: 2px @base-main-color solid;
+	}
+
+	.checked:before{
+		display:inline-block;
+		position: absolute;
+		top:10px;
+		right: 10px;
+		font:normal normal normal 14px/1 FontAwesome;
+		font-size:28px;	
+		color: @base-main-color;
+		text-rendering:auto;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+		transform:translate(0, 0);
+		content: "\f00c ";
+	}
+}
+
+.coupon{
+	cursor: pointer;
+	margin: @base-padding-v;
+	text-align: left;
+	border: 2px #eee solid;
+	.cat{
+		padding-top: 5px;
+	}
+
+	h3{
+		font-size: @font-size-md;
+		padding: 0 0 10px 0;
+		border-bottom:1px #eee solid;
+		margin-bottom: 10px;
+		span{
+			font-weight: normal;
+			font-size: @font-size-lg;
+			color: @base-warm-color;
+		}
+	}
+}
+
+/* 个人中心主页 */
+.user-info{
+	background: @base-main-color;
+
+}
+
+.info-detail{
+	text-align: left;
+	color: #fff;
+	h3{
+		font-weight: normal;
+		padding: 0 ;
+	}
+
+	.button-white{
+		padding: 0.4em 1em;
+		//border: 1px #8CDBCA solid;
+		//color: #8CDBCA;
+	}
+
+	p{
+		font-size: @font-size-lg;
+		padding:10px 0 2px 0;
+		margin: 0;
+		//line-height: 18px;
+	}
+}

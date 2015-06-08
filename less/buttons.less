@@ -20,7 +20,11 @@ button, input{
 	border: @btn-border;
 	cursor: pointer;
 	display: inline-block;
-	.button-md;
+	.button-bg;
+}
+
+.button:visited{
+	//color: #fff;
 }
 
 .button{
@@ -40,6 +44,10 @@ button, input{
 	background: @btn-background-hv-grey;
 }
 
+.button-grey:visited{
+	color: @global-font-color;
+}
+
 .button-default{
 	background: @btn-background-default;
 	border: @btn-border-default;
@@ -49,6 +57,10 @@ button, input{
 .button-default:hover{
 	background: @btn-background-hv-default;
 	border: @btn-border-hv-default;
+}
+
+.button-default:visited{
+	color: @btn-color-default;
 }
 
 .button-warm{
@@ -61,22 +73,60 @@ button, input{
 	background: @btn-background-hv-warm;
 	border: @btn-border-hv-warm;
 }
+
+.button-warm:visited{
+	color: @btn-color-warm;
+}
+
+.button-blank{
+	border: @btn-border-blank;
+	color: @base-main-color;
+	background:  none;
+}
+
+.button-blank:hover{
+	border: @btn-border-blank;
+	color: @base-main-color;
+	background: none;
+}
+
+.button-blank:visited{
+	border: @btn-border-blank;
+	color: @base-main-color;
+}
+
+.button-white{
+	border:@btn-border-white;
+	color: #fff;
+	background:  none;
+}
+
+.button-white:hover{
+	border: @btn-border-white;
+	color: #fff;
+	background: none;
+}
+
+.button-white:visited{
+	border: @btn-border-white;
+	color: #fff;
+}
 ////////////////////////////
 //按钮尺寸
 .button-sm{
 	padding: @btn-padding-sm;
-	font-size: @font-size-sm;
+	font-size: @font-size-md;
 }
 
 
 .button-md{
 	padding: @btn-padding-md;
-	font-size: @font-size-md;
+	font-size: @font-size-md;//@font-size-md;
 }
 
-.button-lg{
-	padding: @btn-padding-lg;
-	font-size: @font-size-lg;
+.button-bg{
+	padding: @btn-padding-bg;
+	font-size: @font-size-bg;
 }
 
 //宽屏按钮

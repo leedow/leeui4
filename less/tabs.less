@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/**
+ * tabs style
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-06-07 20:14:09
+ * @version $Id$
+ */
+
+.tabs-layout{
+
+}
+
+
+.tabs{
+	//width: @tabs-width;
+
+}
+
+.tab-box{
+
+}
+
+//纵向
+.tabs-layout-v{
+	position: relative;
+	.tabs{
+		position: absolute;
+		top:0;
+		left:0;
+		width: @tabs-width;
+		height: 100%;
+		background: @base-light-color;
+		li{
+			width: 100%;
+			padding: 0.8em 0.8em;
+			text-align: left;
+			border-bottom:1px @base-line-color solid;
+		}
+		.current{
+			background: @tabs-current-color;
+		}
+	}
+
+	.tab-box{
+		//padding-left: @tabs-width;
+		display: none;
+	}
+}

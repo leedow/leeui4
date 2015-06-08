@@ -5,8 +5,15 @@
  * @date    2015-05-19 21:37:28
  * @version $Id$
  */
-leeui.widgets.dialog = (function($){
+leeui.widgets.dialog = (function(){
 	function init(){
+		$('.close-dialog').click(function(){
+			$(this).parents('.dialog').hide();
+		});
+
+		//$('.dialog').css('height', $('body').height());
+
+
 		$.dialog = function(option){
 			var obj = $(option.name);
 			obj.show();
@@ -14,18 +21,16 @@ leeui.widgets.dialog = (function($){
 			if (option.open != undefined) {
 				option.open();
 			};
-
+/*
 			if (option.close != undefined) {
-				//option.close();
-				obj.find('.close-dialog').click(function(){
-					obj.hide();
+				obj.find('.close-dialog').on('click', function(){
 					option.close();
 				});
-			};
-		}
+			};*/
+		} 
 	}
 
 	return {
 		init: init
 	}
-})(Zepto);
+})();

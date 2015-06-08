@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<title>Dialog - leeui4</title>
+<title>选择控件</title>
 <link href="../leeui.min.css" type="text/css" rel="stylesheet">
 <link href="../fonts/font-awesome.min.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="../js/zepto.min.js"></script>
@@ -16,38 +16,44 @@
 <body>
 	<header class="layout-header">
 		<div class="header">
-			Welcome to leeui4
+			选择控件
 		</div>
 	</header>
 	<div class="layout layout-top">
-		<div class="row">
+		<h3 class="list-title">
+			单 选
+		</h3>
+		<div class="list-item">
+			<input name="name1" type="radio" value="1">
+			<input name="name1" type="radio" value="2">
+			<div class="radio-box" name="name1" value="1">
+				1
+			</div>
+			<div class="radio-box" name="name1" value="2">
+				2
+			</div>
 			
-			<div class="col-12" style="padding:10px;">
-				<button class="button button-default button-block" id="dia">打开Dialog</button>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-		$('#dia').click(function(){
-			$.dialog({
-				name: '#search',
-				open: function(){
-					alert('打开');
-				}/*,
-				close: function(){
-					alert('关闭');
-				}*/
-			});
-		});
-	</script>
+ 		</div>
 
-	<div class="dialog-layout dialog" id="search">
-		<div class="header-layout">
-			<div class="header">
-				搜索  
-				<a class="button-left close-dialog"><i class="fa fa-search"></i></a>
+		<h3 class="list-title">
+			多 选
+		</h3>
+		<div class="list-item">
+			<input name="name2[0]" type="checkbox" value="1">
+			<input name="name2[1]" type="checkbox" value="2">
+
+			<div class="check-box" name="name2[0]" value="1">
+1
 			</div>
+			
+			<div class="check-box" name="name2[1]" value="2">
+				2
+			</div>
+
+
+	 
 		</div>
+
 	</div>
 </body>
 </html>
