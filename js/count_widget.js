@@ -7,37 +7,67 @@
  */
 leeui.widgets.count = (function(){
 	var obj;
+	var stamp = 0;
 	//初始化DOM
 	function init(){
 		obj = $('.count-widget');
-		obj.find('input').focus(function(){
-			document.getElementById($(this).attr('id')).select();
-			$(this).select();
-			/*if ($(this).val() == 0) {
-				$(this).val('');
-			}*/
+		obj.find('input').click(function(){
+			
+			stamp = $(this).val();
+			$(this).val("")
+
 		}).blur(function(){
-			if ($(this).val() == '') {
-				$(this).val('0');
-			}
+			var type = getType($(this).parent('.count-widget'));
+			var v  = $(this).val(); 
+	
+			if (!test(v, type)) {
+				var res = filter(v, type);
+		
+				
+				if (res == "") {
+					$(this).val(stamp);
+				} else {
+					$(this).val(res);
+				}
+			}  
 		}).change(function(){
 			var v  = $(this).val(); 
-			if (!test(v)) {
-				$(this).val(filter(v));
-			}
+			var type = getType($(this).parent('.count-widget'));
+			if (!test(v, type)) {
+				var res = filter(v, type);
+			
+				if (res == "") {
+					$(this).val(stamp);
+				} else {
+					$(this).val(res);
+				}
+			}  
 		})
 		add();
 		sub();	
 	}
 
+	function getType(obj){
+		return obj.attr('data-type')?obj.attr('data-type'):"int";
+	}
+
 	function add(){
 		obj.find('.plus').click(function(){
 			var input = $(this).parent('.count-widget').find('input');
+			var type = getType($(this).parent('.count-widget'));
 			var count = input.val();
-			if (!test(count)) {
-				count = filter(count);
+			if (!test(count, type)) {
+				count = filter(count, type);
 			};
-			count++;
+			if(type == 'int'){
+				count++;
+			} 
+			if(type == 'double'){
+
+				count = parseFloat(count) + 0.1;
+				count = count.toFixed(2);
+			}
+			
 			input.val(count);
 		});
 	}
@@ -45,31 +75,52 @@ leeui.widgets.count = (function(){
 	function sub(){
 		obj.find('.sub').click(function(){
 			var input = $(this).parent('.count-widget').find('input');
+			var type = getType($(this).parent('.count-widget'));
 			var count = input.val();
-			if (!test(count)) {
-				count = filter(count);
+			if (!test(count, type)) {
+				count = filter(count, type);
 			};
-			if (count > 0) {
+			if (count > 0 && type == 'int') {
 				count--;
 			};
+			if (count > 0 && type == 'double') {
+				count = parseFloat(count) - 0.1;
+				count = count.toFixed(2);
+			};
+		
 			input.val(count);
 		});	
 	}
 
 	//是否为数字
-	function test(val){
-		var reg = /^[0-9]+$/; 
-		if (reg.test(val)){
+	function test(val, type){
+		var type = type?type:"int";
+
+		var reg = {
+			'int':  /^[0-9]+$/,
+			'double': /^[0-9]+(\.[0-9]+)?$/
+		}
+		//var reg = /^[0-9]+$/; 
+		if (reg[type].test(val)){
 			return true;
 		} else {
 			return false;
-			//$(this).val(v.replace(/\D*/g, '');
+			 
 		}
 	}
 
 	//过滤非数字
-	function filter(val){
-		return val.replace(/\D*/g, '');
+	function filter(val, type){
+		var type = type?type:"int";
+		console.log(val);
+		if (type == 'int') {
+			
+			return val.replace(/\D*/g, ''); 
+		} 
+		if (type == 'double') {
+			return val.replace(/[^\d\.]/g, '');
+		}
+		
 	}
 
 	return {

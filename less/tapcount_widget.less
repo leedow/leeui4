@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * 滑动数字选择
+ * @authors leedow (644743991@qq.com)
+ * @website http://www.leedow.com
+ * @date    2015-06-09 18:03:03
+ * @version $Id$
+ */
+.tapcounter{
+	display: none;
+	overflow: hidden;
+	width: 180px;
+	font-size: @font-size-lg;
+	height: 100px;
+	border:1px solid;
+	position: absolute;
+	left:0;
+	top:0;
+
+	li{
+		height: 2em;
+	}
+}
+
+
+
+.tapcounter-show{
+	display: block;
+	animation: scaleUp 0.3s both ease; 
+	-webkit-animation: scaleUp 0.3s both ease;
+	-moz-animation: scaleUp 0.3s both ease; 
+}
+

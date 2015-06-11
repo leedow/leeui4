@@ -7,7 +7,8 @@ module.exports = function(grunt){
 				'js/dialog_widget.js', 
 				'js/check_widget.js', 
 				'js/sidebar_widget.js',
-				'js/tabs_widget.js'],
+				'js/tabs_widget.js',
+				'js/tapcount_widget.js'],
 				dest: 'leeui.min.js'
 			}/*,
 			build2: {
@@ -26,7 +27,7 @@ module.exports = function(grunt){
 	    		files: ['less/*.less', 'js/*'],
 	    		tasks: ['less:dev', 'uglify:build']
 	    	}
-	    },
+	    },	
 	    less: {
 	    	dev: {
 	    		options: {

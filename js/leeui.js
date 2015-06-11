@@ -26,6 +26,7 @@ leeui.widgets = {};
 			leeui.widgets.check.init();
 			leeui.widgets.sidebar.init();
 			leeui.widgets.tabs.init();
+			leeui.widgets.tapcount.init();
 		});
 	}
 })

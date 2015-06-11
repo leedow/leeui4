@@ -16,7 +16,7 @@ leeui.widgets.sidebar = (function(){
 			close();
 		});
 		$('body').click(function(){
-			var flag = $('.sidebar-layout').attr('class');
+			var flag = $('.sidebar-layout').attr('class')?$('.sidebar-layout').attr('class'):"";
 			if (flag.indexOf('side-open') > 0) {
 				//console.log('close sidebar')
 				close();

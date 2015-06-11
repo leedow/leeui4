@@ -8,12 +8,15 @@
 <link href="../leeui.min.css" type="text/css" rel="stylesheet">
 <link href="../fonts/font-awesome.min.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/touch.js"></script>
+<script type="text/javascript" src="../js/iscroll-probe.js"></script>
 <script type="text/javascript" src="../leeui.min.js"></script>
 <script type="text/javascript">
 	leeui.init();
 </script>
 </head>
 <body>
+
 	<header class="layout-header">
 		<div class="header">
 			数字选择控件
@@ -22,17 +25,27 @@
 	<div class="layout layout-top">
 		
 		<ul class="list">
-			<li class="list-item list-item-sp">
+			<li class="list-item">
 				<div class="count-widget">
-					<button class="sub"><i class="fa fa-minus"></i></button><input type="number" value="0"><button class="plus"><i class="fa fa-plus"></i></button>
+					<button class="sub"><i class="fa fa-minus"></i></button><input type="tel" value="0"><button class="plus"><i class="fa fa-plus"></i></button>
 				</div>
-				<div style="display:inline-block">
-					<button class="button-default button-md">加入购物车</button>
+				 
+
+				 <div class="count-widget" data-type="double">
+					<button class="sub"><i class="fa fa-minus"></i></button><input type="tel" value="0"><button class="plus"><i class="fa fa-plus"></i></button>
 				</div>
+			</li>
+			<li class="list-item">
+				
+				<input type="number" value="0" class="tapcount">
+				
+				 <input type="number" value="0" class="tapcount">
 			</li>
 	
 		</ul>
 
 	</div>
+
+	 
 </body>
 </html>
