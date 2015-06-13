@@ -62,7 +62,7 @@ leeui.widgets.count = (function(){
 			if(type == 'int'){
 				count++;
 			} 
-			if(type == 'double'){
+			if(type == 'float'){
 
 				count = parseFloat(count) + 0.1;
 				count = count.toFixed(2);
@@ -83,7 +83,7 @@ leeui.widgets.count = (function(){
 			if (count > 0 && type == 'int') {
 				count--;
 			};
-			if (count > 0 && type == 'double') {
+			if (count > 0 && type == 'float') {
 				count = parseFloat(count) - 0.1;
 				count = count.toFixed(2);
 			};
@@ -98,7 +98,7 @@ leeui.widgets.count = (function(){
 
 		var reg = {
 			'int':  /^[0-9]+$/,
-			'double': /^[0-9]+(\.[0-9]+)?$/
+			'float': /^[0-9]+(\.[0-9]+)?$/
 		}
 		//var reg = /^[0-9]+$/; 
 		if (reg[type].test(val)){
@@ -117,7 +117,7 @@ leeui.widgets.count = (function(){
 			
 			return val.replace(/\D*/g, ''); 
 		} 
-		if (type == 'double') {
+		if (type == 'float') {
 			return val.replace(/[^\d\.]/g, '');
 		}
 		

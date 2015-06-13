@@ -17,10 +17,12 @@ leeui.widgets.sidebar = (function(){
 		});
 		$('body').click(function(){
 			var flag = $('.sidebar-layout').attr('class')?$('.sidebar-layout').attr('class'):"";
-			if (flag.indexOf('side-open') > 0) {
-				//console.log('close sidebar')
-				close();
-			};
+		 
+				if (flag.indexOf('side-open') > 0) {
+					//console.log('close sidebar')
+					close();
+				};
+			 
 			 		
 		});
 	}
