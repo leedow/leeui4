@@ -8,7 +8,8 @@ module.exports = function(grunt){
 				'js/check_widget.js', 
 				'js/sidebar_widget.js',
 				'js/tabs_widget.js',
-				'js/tapcount_widget.js'],
+				'js/tapcount_widget.js',
+				'js/score_widget.js'],
 				dest: 'leeui.min.js'
 			}/*,
 			build2: {
